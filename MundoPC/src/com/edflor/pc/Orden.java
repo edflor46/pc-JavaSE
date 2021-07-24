@@ -18,7 +18,13 @@ public class Orden {
         this.computadoras = new Computadora[MAX_COMPUTADORAS];
     }
     
-    
-    
+    //Agregar computadora al array
+     public void agregarComputadora(Computadora computadora){
+         if (this.contadorComputadoras < Orden.MAX_COMPUTADORAS) {
+             this.computadoras[this.contadorComputadoras++] = computadora;
+         }else{
+             System.out.println("Has superado el limite " + Orden.MAX_COMPUTADORAS);
+         }
+     }
     
 }
